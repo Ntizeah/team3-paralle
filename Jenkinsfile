@@ -1,33 +1,3 @@
-
-
-=================================================================================================
-    agent any
-    stages{
-        stage('paralle-level'){
-            paralle
-                stage('sub-job1'){
-                    steps{
-                        echo "sub-job1 task"
-                    }
-                }
-                stage('sub job2'){
-                    steps{
-                        echo "sub-job2 task"
-                    }
-                }
-            }
-        }
-        stage('version-check'){
-            steps{
-                echo "end of paralle job"
-            }
-        }
-    }
-}
-
-
-==================================================================================================
-
 pipeline{
     agent any
     stages{
